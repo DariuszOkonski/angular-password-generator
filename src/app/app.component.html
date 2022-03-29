@@ -7,24 +7,36 @@
 
 <div>
   <label>Use Letters</label>
-  <input type="checkbox" />
+  <input 
+      [checked]="this.includeLetters"
+      (change)="this.onChangeUseLetters()" 
+      type="checkbox" 
+    />
 </div>
 
 <div>
   <label>Use Numbers</label>
-  <input type="checkbox" />
+  <input 
+    [checked]="this.includeNumbers"
+    (change)="this.onChangeUseNumbers()"
+    type="checkbox" 
+  />
 </div>
 
 <div>
   <label>Use Symbols</label>
-  <input type="checkbox" />
+  <input 
+    [checked]="this.includeSymbols"
+    (change)="this.onChangeUseSymbols()"
+    type="checkbox" 
+  />
 </div>
 
 <div>
-  <button>Generate!</button>
+  <button (click)="this.onButtonClick()">Generate!</button>
 </div>
 
 <div>
   <label>Your Password</label>
-  <input />
+  <input [value]="this.password" />
 </div>
