@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  includeLetters = true;
+  includeLetters = false;
   password = '';
   
   onChangeUseLetters() {
