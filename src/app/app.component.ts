@@ -13,6 +13,10 @@ export class AppComponent {
   includeSymbols = false;
   password = '';
   
+  isButtonDisabled() {
+    return !(this.length && (this.includeLetters || this.includeSymbols || this.includeNumbers));
+  }
+
   onChangeLength(event: any) {
     const parsedValue = parseInt(event.target.value);
 

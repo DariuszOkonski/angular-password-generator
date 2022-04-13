@@ -37,10 +37,13 @@
 </div>
 
 <div>
-  <button (click)="this.onButtonClick()">Generate!</button>
+  <button 
+    [disabled]="this.isButtonDisabled()"
+    (click)="this.onButtonClick()"
+  >Generate!</button>
 </div>
 
 <div>
   <label>Your Password</label>
-  <input [value]="this.password" />
+  <input disabled [value]="this.password" />
 </div>
