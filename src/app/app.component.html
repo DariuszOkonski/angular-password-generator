@@ -16,12 +16,20 @@
 
 <div>
   <label>Use Numbers</label>
-  <input type="checkbox" />
+  <input 
+    type="checkbox"
+    (change)="this.onChangeUseNumbers()"
+    [checked]="this.includeNumbers"
+  />
 </div>
 
 <div>
   <label>Use Symbols</label>
-  <input type="checkbox" />
+  <input 
+    type="checkbox" 
+    (change)="this.onChangeUseSymbols()"
+    [checked]="this.includeSymbols"
+  />
 </div>
 
 <div>
